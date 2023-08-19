@@ -1,10 +1,13 @@
 import React from 'react'
 import {StyleSheet, Text} from 'react-native'
+import {useSaldo} from '../context/ContaContext'
 
 const Saldo = (props) => {
 
+  const {saldo} = useSaldo();
+
   return (
-     <Text style={styles.text}> Saldo: {props.Valor} </Text>
+     <Text style={styles.text}> Saldo: {saldo} </Text>
   );
 
 }
